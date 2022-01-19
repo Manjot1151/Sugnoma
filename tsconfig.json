@@ -1,0 +1,13 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "lib": ["ES2021"],
+        "module": "CommonJS", 
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "target": "ES2021",
+    },
+    "exclude": ["node_modules"]
+}

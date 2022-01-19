@@ -1,0 +1,17 @@
+{
+  "name": "sugnoma",
+  "version": "1.0.0",
+  "description": "Sugnoma Discord Bot.",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "test": "ts-node ./index.ts"
+  },
+  "author": "n1ck_pro#7036 and Manjot1151#8472",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
