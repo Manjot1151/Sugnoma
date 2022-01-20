@@ -1,16 +1,15 @@
 import { Bot } from './Bot';
 import { token } from './config.json';
 
-const client = new Bot({intents: ['GUILDS', 'GUILD_MESSAGES'], failIfNotExists: false, allowedMentions: {repliedUser: false}})
+const client = new Bot({intents: ['GUILDS', 'GUILD_MESSAGES'], failIfNotExists: false, allowedMentions: {repliedUser: false}}, '*')
 client.setup()
 client.login(token)
 
-const prefix = '*' 
 client.on('messageCreate', (msg) => {
-    if (!msg.content.startsWith(prefix)) return;
+    if (!msg.content.startsWith(client.prefix)) return;
 
     const args = msg.content.split(" ")
-    const commandName = args[0].substring(prefix.length)
+    const commandName = args[0].substring(client.prefix.length)
     args.shift()
 
     const command = client.commands.find(cmd => cmd.name == commandName)
@@ -20,5 +19,5 @@ client.on('messageCreate', (msg) => {
 })
 
 client.on('ready', () => {
-    console.log('Hello!')
+    console.log(`Logged in as ${client.user.tag}...`)
 })
