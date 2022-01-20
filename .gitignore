@@ -1,2 +1,11 @@
-/config.json
+# Configuration Files
+config.json
+
+# Misc Files
+Sugnoma.code-workspace
+
+# Compiled Code
+build
+
+# Node Modules
 /node_modules

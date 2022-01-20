@@ -1,6 +1,6 @@
 import { Message } from 'discord.js';
 import { Bot } from '../Bot';
-import { Command } from "../commandhandler/Command"; 
+import { Command } from "../Command"; 
 import { CommandInterface} from '../typings';
 import { CommandType } from '../typings/enums';
 

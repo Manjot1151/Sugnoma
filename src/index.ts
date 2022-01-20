@@ -1,5 +1,5 @@
 import { Bot } from './Bot';
-import { token } from './config.json';
+import { token } from '../config.json';
 
 const client = new Bot({intents: ['GUILDS', 'GUILD_MESSAGES'], failIfNotExists: false, allowedMentions: {repliedUser: false}}, '*')
 client.setup()

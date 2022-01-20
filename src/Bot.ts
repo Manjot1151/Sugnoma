@@ -13,7 +13,7 @@ export class Bot extends Client<true> {
     }
 
     async setup() {
-        const commandFiles = readdirSync('commands').filter(file => file.toString().endsWith('.ts'));
+        const commandFiles = readdirSync('./src/commands').filter(file => file.toString().endsWith('.ts'));
         for (const file of commandFiles) {
             const commandFile = await import(`./commands/${file}`) as { default: CommandClass }
             const command: CommandInterface = new commandFile.default()
