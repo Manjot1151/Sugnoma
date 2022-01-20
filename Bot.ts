@@ -4,10 +4,12 @@ import { readdirSync } from 'fs';
 
 export class Bot extends Client<true> {
     public commands: Collection<string, CommandInterface>; 
+    public prefix: string;
 
-    constructor(options: ClientOptions) {
+    constructor(options: ClientOptions, prefix: string) {
         super(options);
-        this.commands = new Collection()
+        this.commands = new Collection();
+        this.prefix = prefix;
     }
 
     async setup() {

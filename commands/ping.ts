@@ -1,14 +1,16 @@
 import { Message } from 'discord.js';
 import { Bot } from '../Bot';
 import { Command } from "../commandhandler/Command"; 
-import { CommandInterface } from '../typings';
+import { CommandInterface} from '../typings';
+import { CommandType } from '../typings/enums';
 
 export default class PingCommand extends Command implements CommandInterface {
     constructor() {
         super({
             name: "ping",
             help: "get bot ping",
-            usage: "ping"
+            usage: "ping",
+            type: CommandType.MISC
         })
     }
 
