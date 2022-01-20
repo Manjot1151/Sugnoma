@@ -1,6 +1,7 @@
 import { Message } from 'discord.js';
 import { Bot } from '../Bot';
 import { Command } from "../commandhandler/Command"; 
+import { CommandType } from '../commandhandler/CommandType';
 import { CommandInterface } from '../typings';
 
 export default class PingCommand extends Command implements CommandInterface {
@@ -8,7 +9,8 @@ export default class PingCommand extends Command implements CommandInterface {
         super({
             name: "help",
             help: "stop it get some help",
-            usage: "help (command)"
+            usage: "help (command)",
+            type: CommandType.HELP
         })
     }
 
@@ -31,6 +33,6 @@ export default class PingCommand extends Command implements CommandInterface {
             return;
         }
 
-        msg.reply(`**${command.name}**\nHelp: ${command.help}\nUsage: ${command.usage}`);
+        msg.reply(`**${command.name}**\nHelp: ${command.help}\nUsage: ${command.usage}\nType: ${command.type}`);
     }
 }
