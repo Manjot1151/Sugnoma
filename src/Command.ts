@@ -1,5 +1,5 @@
-import { CommandOptions } from "../typings";
-import { CommandType } from "../typings/enums";
+import { CommandOptions } from "./typings";
+import { CommandType } from "./typings/enums";
 
 export class Command {
     public name: string;
