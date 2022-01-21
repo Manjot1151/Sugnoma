@@ -6,6 +6,7 @@
         "lib": ["ES2021"],
         "module": "CommonJS", 
         "moduleResolution": "Node",
+        "outDir": "build",
         "resolveJsonModule": true,
         "target": "ES2021",
     },

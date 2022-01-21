@@ -1,6 +1,6 @@
-import { Message } from "discord.js";
-import { Bot } from "../Bot";
-import { CommandType } from "./enums";
+import { Message } from 'discord.js';
+import { CommandType } from './enums';
+import { Bot } from '../Bot';
 
 export interface CommandClass extends CommandInterface {
     new ()

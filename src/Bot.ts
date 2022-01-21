@@ -1,9 +1,9 @@
-import { Client, ClientOptions, Collection } from "discord.js";
-import { CommandClass, CommandInterface } from "./typings";
 import { readdirSync } from 'fs';
+import { Client, ClientOptions, Collection } from 'discord.js';
+import { CommandClass, CommandInterface } from './typings';
 
 export class Bot extends Client<true> {
-    public commands: Collection<string, CommandInterface>; 
+    public commands: Collection<string, CommandInterface>;
     public prefix: string;
 
     constructor(options: ClientOptions, prefix: string) {
@@ -15,8 +15,8 @@ export class Bot extends Client<true> {
     async setup() {
         const commandFiles = readdirSync('./src/commands').filter(file => file.toString().endsWith('.ts'));
         for (const file of commandFiles) {
-            const commandFile = await import(`./commands/${file}`) as { default: CommandClass }
-            const command: CommandInterface = new commandFile.default()
+            const commandFile = await import(`./commands/${file}`) as { default: CommandClass };
+            const command: CommandInterface = new commandFile.default();
             this.commands.set(command.name, command);
         }
     }
