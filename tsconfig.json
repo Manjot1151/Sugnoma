@@ -8,6 +8,7 @@
         "moduleResolution": "Node",
         "outDir": "build",
         "resolveJsonModule": true,
+        "strictNullChecks": true,
         "target": "ES2021",
     },
     "exclude": ["node_modules"]
