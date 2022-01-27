@@ -36,6 +36,7 @@ module.exports = {
         'func-name-matching': 'error',
         'func-names': 'error',
         'no-array-constructor': 'error',
+        'no-empty': 'off',
         'no-empty-function': 'error',
         'no-floating-decimal': 'error',
         'no-invalid-this': 'error',

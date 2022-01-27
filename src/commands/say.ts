@@ -17,7 +17,6 @@ export default class SayCommand extends Command implements CommandInterface {
     execute(client: Bot, msg: Message, args: string[]) {
         try {
             msg.delete();
-        // eslint-disable-next-line no-empty
         } catch {}
 
         msg.channel.send(args.join(' '));
