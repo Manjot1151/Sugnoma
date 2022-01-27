@@ -1,6 +1,12 @@
 import { Bot } from './Bot';
 
-const client = new Bot({ allowedMentions: { repliedUser: false }, failIfNotExists: false, intents: ['DIRECT_MESSAGES', 'GUILDS', 'GUILD_MESSAGES'], partials: ['CHANNEL'] }, '*');
+const client = new Bot({
+    allowedMentions: { repliedUser: false },
+    failIfNotExists: false,
+    intents: ['DIRECT_MESSAGES', 'GUILDS', 'GUILD_MESSAGES'],
+    partials: ['CHANNEL']
+}, '*');
+
 client.setup();
 
 client.on('messageCreate', msg => {
